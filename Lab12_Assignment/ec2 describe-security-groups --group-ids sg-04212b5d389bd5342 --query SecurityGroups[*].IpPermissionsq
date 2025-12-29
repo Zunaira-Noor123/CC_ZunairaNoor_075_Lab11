@@ -1,0 +1,33 @@
+[
+    [
+        {
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80,
+            "UserIdGroupPairs": [
+                {
+                    "Description": "HTTP from Nginx SG only",
+                    "UserId": "276995858123",
+                    "GroupId": "sg-038da4178bc17d410"
+                }
+            ],
+            "IpRanges": [],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+        },
+        {
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22,
+            "UserIdGroupPairs": [],
+            "IpRanges": [
+                {
+                    "Description": "SSH from my IP",
+                    "CidrIp": "20.192.21.53/32"
+                }
+            ],
+            "Ipv6Ranges": [],
+            "PrefixListIds": []
+        }
+    ]
+]
